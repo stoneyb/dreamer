@@ -10,4 +10,4 @@ octave_n=5
 octave_scale=2.0  
 end='inception_4a/3x3
 
-[example1]: https://github.com/stoneyb/dreamer/blob/master/images/tetons_0002.jpg "tetons 1"
+[example1]: https://github.com/stoneyb/dreamer/blob/master/images/tetons_0009.jpg "tetons 1"
