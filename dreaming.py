@@ -7,7 +7,7 @@ from google.protobuf import text_format
 
 import caffe
 
-ORIGINAL_IMAGE = 'tetons.jpg'
+ORIGINAL_IMAGE = 'orig_images/tetons.jpg'
 
 model_path = '../caffe/models/bvlc_googlenet/' # substitute your path here
 net_fn   = model_path + 'deploy.prototxt'
