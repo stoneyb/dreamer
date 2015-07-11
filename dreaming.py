@@ -8,7 +8,7 @@ from google.protobuf import text_format
 import caffe
 
 IMAGE_DIR = 'orig_images/'
-ORIGINAL_IMAGE = 'cliff.jpg'
+ORIGINAL_IMAGE = 'darts.jpg'
 
 model_path = '../caffe/models/bvlc_googlenet/' # substitute your path here
 net_fn   = model_path + 'deploy.prototxt'
@@ -87,8 +87,8 @@ def main():
     frame_i = 0
     h, w = frame.shape[:2]
     s = 0.05 # scale coefficient
-    for i in xrange(250):
-        frame = deepdream(net, frame, iter_n=10, octave_n=5, octave_scale=1.2, end='inception_4c/5x5')
+    for i in xrange(20):
+        frame = deepdream(net, frame, iter_n=10, octave_n=5, octave_scale=1.1, end='inception_4c/5x5')
         PIL.Image.fromarray(np.uint8(frame)).save("images/%s_%04d.jpg" % (ORIGINAL_IMAGE.split(".")[0], frame_i))
         frame = nd.affine_transform(frame, [1-s,1-s,1], [h*s/2,w*s/2,0], order=1)
         frame_i += 1
